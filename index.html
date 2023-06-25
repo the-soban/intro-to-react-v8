@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Adoption App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="root">not rendered</div>
+    <script src="https://unpkg.com/react@18.2.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18.2.0/umd/react-dom.development.js"></script>
+
+    <script>
+        const App = () => {
+            return React.createElement (
+                "div",   //the actual element we wanna create
+                {},    //any attributes we wanna pass to the element
+                React.createElement("h1", {}, "Pet Adopt!")   //this is what will be inside of our created element, its children
+            )
+        };
+    </script>
+</body>
+</html>
