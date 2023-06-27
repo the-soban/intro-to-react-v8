@@ -13,19 +13,19 @@ const App = () => {
         [
             React.createElement("h1", {}, "Adopt Me!"),
             React.createElement(Pet, {
-                animal: Cat,
-                name: Vanessa,
-                breed: Persian,
+                name: "Vanessa",
+                animal: "Cat",
+                breed: "Persian",
             }),
             React.createElement(Pet, {
-                animal: Dog,
-                name: Akela,
-                breed: Husky,
+                name: "Akela",
+                animal: "Dog",
+                breed: "Husky",
             }),
             React.createElement(Pet, {
-                animal: Cat,
-                name: Luna,
-                breed: Himalayan,
+                name: "Luna",
+                animal: "Cat",
+                breed: "Himalayan",
             }),
         ]
     )
