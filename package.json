@@ -1,0 +1,23 @@
+{
+  "name": "intro-to-react-v8",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/the-soban/intro-to-react-v8.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/the-soban/intro-to-react-v8/issues"
+  },
+  "homepage": "https://github.com/the-soban/intro-to-react-v8#readme",
+  "devDependencies": {
+    "prettier": "^2.7.1"
+  }
+}
