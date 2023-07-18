@@ -1,12 +1,19 @@
 import { useState } from "react";
 import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
+import { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import fetchPet from "./fetchPet";
 import Carousel from "./Carousel";
 import ErrorBoundary from "./ErrorBoundary";
 import Modal from "./Modal";
+import ApodtedPetContext from "./AdoptedPetContext";
 
 const Details = () => {
+  const navigate = useNavigate();
+  // eslint-disable-next-line no-unused-vars
+  const [_, setAdoptedPet] = useContext(ApodtedPetContext);
+
   const [showModal, setShowModal] = useState(false);
   const { id } = useParams(); //useParams gets this id from something called context, which is in App.jsx component
   const results = useQuery(["details", id], fetchPet); //["details", id] will be passed as the queryKey to fetchPet
@@ -50,7 +57,14 @@ const Details = () => {
             <div>
               <h1>Would you like to adopt {pet.name}?</h1>
               <div className="buttons">
-                <button>Yes</button>
+                <button
+                  onClick={() => {
+                    setAdoptedPet(pet);
+                    navigate("/");
+                  }}
+                >
+                  Yes
+                </button>
                 <button onClick={() => setShowModal(false)}>No</button>
               </div>
             </div>
